@@ -1,0 +1,11 @@
+<!-- Base tooltip component template -->
+<div <%= wrapper_attributes.map { |k, v| "#{k}=\"#{h(v)}\"" unless v.nil? }.compact.join(" ").html_safe %>>
+  <%= content %>
+  
+  <div <%= tooltip_attributes.map { |k, v| "#{k}=\"#{h(v)}\"" unless v.nil? }.compact.join(" ").html_safe %>>
+    <%= text %>
+    <% if arrow %>
+      <div class="<%= arrow_classes %>"></div>
+    <% end %>
+  </div>
+</div>
