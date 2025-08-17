@@ -1,0 +1,9 @@
+<div class="hidden sm:-my-px sm:ml-6 sm:flex sm:space-x-8">
+  <% links.each do |link| %>
+    <a href="<%= link[:href] %>" 
+       <%= 'aria-current="page"'.html_safe if link[:current] %>
+       class="<%= link_classes(link) %>">
+      <%= link[:name] %>
+    </a>
+  <% end %>
+</div>

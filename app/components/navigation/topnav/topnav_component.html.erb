@@ -1,0 +1,43 @@
+<!-- Include this script tag or install `@tailwindplus/elements` via npm: -->
+<!-- <script src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1" type="module"></script> -->
+<!--
+  This example requires updating your template:
+
+  ```
+  <html class="h-full bg-gray-100">
+  <body class="h-full">
+  ```
+-->
+<div class="min-h-full">
+  <nav class="border-b border-gray-200 bg-white">
+    <div class="mx-auto max-w-8xl px-4 sm:px-6 lg:px-8">
+      <div class="flex h-16 justify-between">
+        <div class="flex">
+          <%= render Navigation::Topnav::LogoComponent.new(src: logo_src) %>
+          <%= render Navigation::Topnav::NavLinksComponent.new(links: nav_links) %>
+        </div>
+        <div class="hidden sm:ml-6 sm:flex sm:items-center">
+          <%= render Navigation::Topnav::NotificationButtonComponent.new %>
+          <%= render Navigation::Topnav::ProfileDropdownComponent.new(
+            user_name: user_name,
+            user_email: user_email,
+            avatar_src: avatar_src
+          ) %>
+        </div>
+        <%= render Navigation::Topnav::MobileMenuComponent.new(
+          links: nav_links,
+          user_name: user_name,
+          user_email: user_email,
+          avatar_src: avatar_src
+        ) %>
+      </div>
+    </div>
+  </nav>
+
+  <%= render Navigation::Topnav::PageHeaderComponent.new(
+    title: page_title,
+    subtitle: page_subtitle
+  ) do %>
+    <!-- Your content -->
+  <% end %>
+</div>
