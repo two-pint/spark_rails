@@ -1,0 +1,24 @@
+<!-- Base modal component template -->
+<div class="relative z-10" aria-labelledby="<%= modal_id %>-title" role="dialog" aria-modal="true" id="<%= modal_id %>">
+  <!-- Background backdrop -->
+  <div class="<%= overlay_classes %>" <%= backdrop_attrs.map { |k, v| "#{k}=\"#{v}\"" }.join(" ").html_safe %>></div>
+
+  <div class="<%= modal_container_classes %>">
+    <div class="<%= modal_wrapper_classes %>">
+      <div class="<%= modal_panel_classes %>">
+        <% if closable %>
+          <div class="<%= close_button_classes %>">
+            <button type="button" class="rounded-md bg-white text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2" data-action="click->modal#close">
+              <span class="sr-only">Close</span>
+              <svg class="<%= close_icon_classes %>" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+          </div>
+        <% end %>
+        
+        <%= content %>
+      </div>
+    </div>
+  </div>
+</div>

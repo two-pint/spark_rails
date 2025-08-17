@@ -1,0 +1,4 @@
+<!-- Base button component template -->
+<<%= tag_name %> <%= button_attributes.map { |k, v| "#{k}=\"#{v}\"" unless v.nil? }.compact.join(" ").html_safe %>>
+  <%= content %>
+</<%= tag_name %>>
