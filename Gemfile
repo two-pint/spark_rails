@@ -17,6 +17,7 @@ gem "stimulus-rails"
 # Use Tailwind CSS [https://github.com/rails/tailwindcss-rails]
 # ViewComponent
 gem "view_component"
+gem "inline_svg"
 # Lucide Rails
 gem "lucide-rails"
 gem "tailwindcss-rails"
