@@ -19,18 +19,18 @@
   </head>
   <body>
     <%= render Navigation::Topnav::TopnavComponent.new(
-                logo_src: "/assets/logo.svg",
-  nav_links: [
-    { name: "Home", href: "/", current: true },
-    { name: "About", href: "/about", current: false },
-    { name: "Contact", href: "/contact", current: false }
-  ],
-  user_name: "Jane Doe",
-  user_email: "jane@example.com",
-  page_title: "Welcome",
-  page_subtitle: "Manage your account"
-) %>
-    <main class="container mx-auto mt-28 px-5 flex">
+      logo_src: "spark_logo.svg",
+      nav_links: [
+        { name: "Home", href: "/", current: true },
+        { name: "About", href: "/about", current: false },
+        { name: "Contact", href: "/contact", current: false }
+      ],
+      user_name: "Jane Doe",
+      user_email: "jane@example.com",
+      page_title: "Welcome",
+      page_subtitle: "Manage your account"
+    ) %>
+    <main class="btn-primary">
       <%= yield %>
     </main>
   </body>
