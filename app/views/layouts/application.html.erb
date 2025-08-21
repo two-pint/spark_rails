@@ -30,7 +30,13 @@
       page_title: "Welcome",
       page_subtitle: "Manage your account"
     ) %>
-    <main class="btn-primary">
+    <main class="">
+      <%= render Buttons::BaseComponent.new(
+        variant: :primary,
+        class: "ml-12",
+        icon: "circle-arrow-left",
+        label: "Click me"
+      ) %>
       <%= yield %>
     </main>
   </body>

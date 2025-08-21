@@ -1,4 +1,10 @@
 <!-- Base button component template -->
 <<%= tag_name %> <%= button_attributes.map { |k, v| "#{k}=\"#{v}\"" unless v.nil? }.compact.join(" ").html_safe %>>
-  <%= content %>
+  <% if icon %>
+    <%= lucide_icon icon, class: "h-4 w-4 #{'mr-2' if label}" %>
+  <% end %>
+  <% if label %>
+    <%= label %>
+  <% end %>
+  <%= content if content? %>
 </<%= tag_name %>>

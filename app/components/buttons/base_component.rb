@@ -3,10 +3,13 @@
 class Buttons::BaseComponent < ViewComponent::Base
   # Base component for all button-related components
   # Provides common functionality and styling for buttons
+  include LucideRails::RailsHelper
 
-  attr_reader :variant, :size, :disabled, :type, :href, :target, :method, :form
+  attr_reader :variant, :size, :disabled, :type, :href, :target, :method, :form, :icon, :label
 
   def initialize(
+    label: nil,
+    icon: nil,
     variant: :primary,
     size: :default,
     disabled: false,
@@ -17,6 +20,8 @@ class Buttons::BaseComponent < ViewComponent::Base
     form: nil,
     **options
   )
+    @label = label
+    @icon = icon
     @variant = variant
     @size = size
     @disabled = disabled

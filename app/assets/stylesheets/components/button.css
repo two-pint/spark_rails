@@ -1,0 +1,47 @@
+.btn-base {
+  @apply px-4 py-2 rounded-lg font-medium transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2;
+}
+
+.btn-primary {
+  @apply bg-indigo-600 text-white hover:bg-indigo-500 focus-visible:ring-indigo-600;
+}
+
+.btn-secondary {
+  @apply bg-white text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50;
+}
+
+.btn-destructive {
+    @apply bg-red-600 text-white hover:bg-red-500 focus-visible:ring-red-600;
+}
+
+.btn-outline {
+  @apply border border-gray-300 bg-white text-gray-700 hover:bg-gray-50 focus-visible:ring-indigo-600;
+}
+
+.btn-ghost {
+  @apply text-gray-700 hover:bg-gray-100 focus-visible:ring-indigo-600;
+}
+
+.btn-link {
+  @apply text-indigo-600 underline-offset-4 hover:underline focus-visible:ring-indigo-600;
+}
+
+.btn-info {
+  @apply bg-indigo-600 text-white hover:bg-indigo-500 focus-visible:ring-indigo-600;
+}
+
+.btn-sm {
+  @apply h-8 rounded-md px-3 text-sm;
+}
+
+.btn-lg {
+  @apply h-12 rounded-md px-8 text-lg;
+}
+
+.btn-icon {
+  @apply h-10 w-10 rounded-md;
+}
+
+.btn-default {
+  @apply h-10 rounded-md px-4 py-2 text-sm;
+}
